@@ -1,0 +1,16 @@
+.view {
+    background: url('/assets/img/tyres.jpg')no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width:100vw;
+} 
+
+
+
+@media (max-width: 400px) {
+    img #slide-3, #slide-2{
+        display: none;
+       
+    }
+}
+
