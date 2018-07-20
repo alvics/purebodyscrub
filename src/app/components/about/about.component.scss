@@ -1,4 +1,61 @@
+.background-image {
+    img {
+        display: block;
+        margin: 20px auto;
+        width: 1170px;
+        padding-right: 25px;
+    }
+}
+
+.background-image2 {
+    img {
+        display: block;
+        margin: 20px auto;
+        padding-right: 80px;
+        width: 1170px;
+        height: 50%;
+    }
+}
+
 .textp {
     display: block;
-    margin: 10px auto;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+h5 {
+    font-weight: 500;
+}
+
+img {
+    padding-left: 30px;
+}
+
+.card {
+    height: 80%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+}
+
+@media (max-width: 1050px) {
+    .background-image,
+    .background-image2 {
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+        }
+    }
+    img {
+        padding: 0;
+        width: 50%;
+    }
 }

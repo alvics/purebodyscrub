@@ -11,6 +11,7 @@ import { ShopComponent } from './components/shop/shop.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ShopComponent,
     HeroComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

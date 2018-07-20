@@ -1,4 +1,9 @@
-# StarterMdbootstrap
+# PureBodyCoffeeScrub Angular 6 Website
+
+## Screen shots
+![](src/assets/img/screenshots/1200.jpg)
+
+![](src/assets/img/screenshots/shop.jpg)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 

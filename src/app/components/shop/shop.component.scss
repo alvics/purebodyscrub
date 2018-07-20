@@ -4,3 +4,32 @@
         margin: 0 auto;
     }
 }
+
+form input,
+{
+    float: right;
+    margin-top: -30px;
+}
+
+@media (max-width: 990px) {
+    .view {
+        img,
+        {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+        }
+    }
+    form input,
+    {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 560px) {
+    form input,
+    {
+        margin-top: 30px;
+        float: left;
+    }
+}

@@ -15,8 +15,8 @@
                             <span class="text-muted" style="color:red!important">$19.99</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div>
-                                <h6 class="my-0">Includes Shipping</h6>
+                            <div id="free-ship" style="margin: 0 auto">
+                                <img src="assets/img/smFREE.png" height="70" alt="">
                             </div>
                             <span class="text-muted" style="color:crimson !important"></span>
                         </li>
@@ -24,12 +24,26 @@
                     </ul>
                     <div class="box-container">
 
-                        <form class="mt-3" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                             <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="8VAXTJVNYDYPQ"><img id="paypal" src="assets/img/paypal.png" height="40" width="40" alt="">
-                            <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                            <input type="hidden" name="hosted_button_id" value="N5UZS5HB7J9CS">
+                            <table>
+                                <tr>
+                                    <td><input type="hidden" name="on0" value="Choose amount">Choose amount</td>
+                                </tr>
+                                <tr>
+                                    <td><select name="os0">
+                                    <option value="1 scrub">1 scrub $19.99 AUD</option>
+                                    <option value="2 scrubs">2 scrubs $35.99 AUD</option>
+                                    <option value="3 scrubs">3 scrubs $49.99 AUD</option>
+                                </select> </td>
+                                </tr>
+                            </table>
+                            <input type="hidden" name="currency_code" value="AUD">
+                            <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
                             <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
                         </form>
+
 
                     </div>
                 </div>
@@ -92,3 +106,15 @@
         </div>
     </div>
 </div>
+
+<footer class="footer grey darken-4">
+    <div class="container">
+        <span class="text-muted"><div class="footer-copyright text-center py-3">
+                <div class="container-fluid">
+                    © 2017 Copyright: PureBodyCoffeeScrub
+                </div>
+            </div></span>
+
+    </div>
+
+</footer>

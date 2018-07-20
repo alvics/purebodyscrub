@@ -41,3 +41,28 @@ main {
 #sect-3 {
     margin: 150px 0;
 }
+
+@media (max-width: 1209px) {
+    .col-md-6 img {
+        display: block;
+        margin: 80px auto;
+        height: 300px;
+        padding-right: 50px;
+    }
+    .bath3 {
+        img {
+            display: block;
+            margin: 180px auto;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .col-md-6 img {
+        display: block;
+        margin: 10px auto;
+        height: 300px;
+        padding-right: 60px;
+    }
+}
