@@ -3,52 +3,45 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="product-image">
-                <div class="view hm-zoom z-depth-2">
-                    <img src="assets/img/pck.png" width="300" alt="">
-                </div>
-                <div class="" style="margin-top:15px">
-                    <ul class="list-group mb-3">
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div>
-                                <h6 class="my-0">Product Price</h6>
-                            </div>
-                            <span class="text-muted" style="color:red!important">$19.99</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div id="free-ship" style="margin: 0 auto">
-                                <img src="assets/img/smFREE.png" height="70" alt="">
-                            </div>
-                            <span class="text-muted" style="color:crimson !important"></span>
-                        </li>
+                <div *ngIf="!paidFor">
+                    <img [src]="scrub.img" width="300" alt="body scrub">
 
-                    </ul>
-                    <div class="box-container">
+                    <div class="" style="margin-top:15px">
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
 
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="N5UZS5HB7J9CS">
-                            <table>
-                                <tr>
-                                    <td><input type="hidden" name="on0" value="Choose amount">Choose amount</td>
-                                </tr>
-                                <tr>
-                                    <td><select name="os0">
-                                    <option value="1 scrub">1 scrub $19.99 AUD</option>
-                                    <option value="2 scrubs">2 scrubs $35.99 AUD</option>
-                                    <option value="3 scrubs">3 scrubs $49.99 AUD</option>
-                                </select> </td>
-                                </tr>
-                            </table>
-                            <input type="hidden" name="currency_code" value="AUD">
-                            <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-                            <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
-                        </form>
+                                <div>
+                                    <h6 class="my-0">Product Price</h6>
+                                </div>
 
+                                <span class="text-muted" style="color:red!important">${{ scrub.price }}</span>
+
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div id="free-ship" style="margin: 0 auto">
+                                    <img src="assets/img/smFREE.png" height="70" alt="free shipping" class="img-fluid">
+                                </div>
+                                <span class="text-muted" style="color:crimson !important"></span>
+                            </li>
+
+                        </ul>
 
                     </div>
                 </div>
             </div>
+
+
+            <div *ngIf=paidFor>
+                <h1>Thank you for your purchase, your scrub will be sent off today!</h1>
+            </div>
+
+            <div [hidden]="paidFor" #paypal></div>
+
+
         </div>
+
+
+
         <div class="col-sm-8">
             <div class="product-detail">
                 <h5 class="product-head">Product Details</h5>
@@ -62,8 +55,13 @@
                             <th scope="row">Product Description</th>
                             <td><strong>Tantalize your senses with:</strong>
 
-                                <p>Pure Body Coffee Scrub a 100% natural blend that actively targets dry skin, cellulite, stretch marks, psoriasis, acne and eczema. Our pure combination of roasted ground coffee beans, sugars & salts assist in exfoliating
-                                    and regenerating healthy new skin cells. The essential rejuvenation oils are highly moisturising giving you smooth supple skin.</p>
+                                <p>Pure Body Coffee Scrub a 100% natural blend that actively targets dry skin,
+                                    cellulite,
+                                    stretch marks, psoriasis, acne and eczema. Our pure combination of roasted ground
+                                    coffee
+                                    beans, sugars & salts assist in exfoliating and regenerating healthy new skin cells.
+                                    The essential rejuvenation oils are highly moisturising giving you smooth supple
+                                    skin.</p>
 
                                 <p>Body Scrub is highly hydrating and great for assisting with skin conditions such</p>
                                 <ul>
@@ -79,25 +77,32 @@
                                 </ul>
                                 <strong>No added preservatives or artificial ingredients.</strong>
 
-                                <p>combined with amazing natural ingredients and scents of coconut, orange, and cacao to leave your skin feeling incredibly soft, rejuvenated and smelling divine.</p>
+                                <p>combined with amazing natural ingredients and scents of coconut, orange, and cacao to
+                                    leave your skin feeling incredibly soft, rejuvenated and smelling divine.</p>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Direction for Use</th>
                             <td>
-                                <p>Take a teaspoon portion, massage onto damp skin in a vigorous circular motion, concentrationg on areas you feel necessary. Leave coffee scrub on for 5-10 minutes then rise off.</p>
+                                <p>Take a teaspoon portion, massage onto damp skin in a vigorous circular motion,
+                                    concentrationg
+                                    on areas you feel necessary. Leave coffee scrub on for 5-10 minutes then rise off.
+                                </p>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Cautions</th>
                             <td>
-                                <p>Before using for the first time, do a patch test. If Coffee Scrub gets into your eyes,rines thoroughly with water. In the unlikley case of irritation, discontinue use.</p>
+                                <p>Before using for the first time, do a patch test. If Coffee Scrub gets into your
+                                    eyes,rines
+                                    thoroughly with water. In the unlikley case of irritation, discontinue use.</p>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Ingredients</th>
                             <td>
-                                <p>Coffee bean, Himalayan pink rock salt, Brown sugar, Organic cacao, Cold press coconut oil, Sweet almond oil, Jojoba oil, Orange oil.</p>
+                                <p>Coffee bean, Himalayan pink rock salt, Brown sugar, Organic cacao, Cold press coconut
+                                    oil, Sweet almond oil, Jojoba oil, Orange oil.</p>
                             </td>
                         </tr>
                     </tbody>
